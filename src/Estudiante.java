@@ -12,4 +12,15 @@ public class Estudiante {
         this.notas = new double[capacidadNotas];
         this.cantidadNotas = 0;
     }
+    public void registrarNota(double nota) {
+        if (cantidadNotas < capacidadNotas) {
+            notas[cantidadNotas] = nota;
+            cantidadNotas++;
+            System.out.println("Nota registrada: " + nota);
+        } else {
+            System.out.println("No se pueden registrar más notas, capacidad máxima alcanzada.");
+        }
+    }
+
+
 }
